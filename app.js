@@ -199,14 +199,23 @@ const solarSystem = [
     };
     
     // 1. Console.log the mass of Mercury
-    
+    console.log(system.mercury.mass);
     
     // 2. Console.log the eccentricity of Venus
-    
+    console.log(system.venus.eccentricity);
     
     // 3. Console.log the sum of the number of satellites of Jupiter, Saturn, Uranus, and Neptune (131)
-    
-    
+    // tricky!  These are of different data types because the number for Jupiter is a string. Will need to convert to number type to do the calculation.
+    // let satSum = (system.jupiter.satellites + system.saturn.satellites);
+    // console.log(satSum);
+    // This was tough!  I had to look up the parseInt function.
+    const sumSats = 
+    parseInt(system.jupiter.satellites) + 
+    parseInt(system.saturn.satellites) + 
+    parseInt(system.uranus.satellites) + 
+    parseInt(system.neptune.satellites);
+    console.log(sumSats);
+
     // 4. Write a conditional that checks if Mercury's radiusp is a string (remember the typeof command). If Mercury's radiusp is a string, change the value to be the same as its radiuse value. (radiusp is radius at the poles, radiuse is radius at the equator).
     
     
